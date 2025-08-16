@@ -30,6 +30,12 @@ mongoose
     process.exit(1);
   });
 
+// Import routers
+import booksRouter from "../endpoints/books.js";
+
+// Register API routes
+app.use("/api/books", booksRouter);
+
 // Example root route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to BookBuddy API!" });
