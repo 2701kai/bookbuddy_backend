@@ -14,12 +14,14 @@ cp .env.example .env
 # git initialisieren..
 git init && touch .gitignore
 
-# local pushen mit
+git add . && git commit -m 'initial commit'
+
+# create remote pivate repo, push local to remote with
 # shortcut ghrc =
-# ghrc() {
-#  read -e -p "Repo Name: " msg
-#  gh repo create "$msg" --private --source=. --push
-#}
+ghrc() {
+ read -e -p "Repo Name: " msg
+ gh repo create "$msg" --private --source=. --push
+}
 
 
 
