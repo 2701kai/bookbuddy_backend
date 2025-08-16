@@ -4,9 +4,9 @@ A RESTful API for managing books, users, and loans using Node.js, Express, and M
 
 ## 🚀 Setup
 
-1. Clone the repo and `cd` into the server directory:
+1. Clone the repo and `cd` into parent directory:
    ```bash
-   cd 0013-16/server
+   cd xyz/your-chosen-dir
    ```
 2. Install dependencies:
    ```bash
