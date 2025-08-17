@@ -32,16 +32,20 @@ mongoose
 
 // Import routers
 import booksRouter from "../endpoints/books.js";
+import loansRouter from "../endpoints/loans.js";
+import usersRouter from "../endpoints/users.js";
 
 // Register API routes
 app.use("/api/books", booksRouter);
+app.use("/api/users", usersRouter);
+app.use("/api/loans", loansRouter);
 
 // Example root route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to BookBuddy API!" });
 });
 
-// Central error handler (to be expanded)
+// Central error handling middleware (consistent error responses)
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: "Internal Server Error" });

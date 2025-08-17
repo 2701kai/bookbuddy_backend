@@ -5,6 +5,7 @@
 
 import express from "express";
 import Book from "../models/Book.js";
+import Loan from "../models/Loan.js";
 
 const router = express.Router();
 
@@ -102,7 +103,13 @@ router.patch("/:id", async (req, res) => {
 // DELETE /api/books/:id - Delete a book (only if no open loans)
 router.delete("/:id", async (req, res) => {
   try {
-    // TODO: Check for open loans before deleting (requires Loan model)
+    // Check for open loans before deleting
+    const openLoans = await Loan.findOne({
+      book: req.params.id,
+      status: "open",
+    });
+    if (openLoans)
+      return sendError(res, 422, "Cannot delete book with open loans");
     const book = await Book.findByIdAndDelete(req.params.id);
     if (!book) return sendError(res, 404, "Book not found");
     res.json({ message: "Book deleted" });
