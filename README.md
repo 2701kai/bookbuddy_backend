@@ -7,7 +7,7 @@ A RESTful API for managing books, users, and loans using Node.js, Express, and M
 ## ✍️ Author’s Note
 
 This project is a hands-on learning exercise in building a robust backend with modern Node.js, Express, and Mongoose. The goal is not just to deliver a working API, but to deeply understand best practices, validation, error handling, and the power of using AI as a coding partner. <br />
-As always: Props, Kudos, Thanks for support, patience, inspiration and his unique way of teaching to my WebDev - teacher **[Markus Lech](https://github.com/Shonkxs).**
+As always: Props, Kudos, Thanks for support, patience, inspiration and his unique way of teaching to my <br />WebDev - teacher **[Markus Lech](https://github.com/Shonkxs).**
 
 ---
 
