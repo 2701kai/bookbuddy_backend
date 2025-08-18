@@ -13,7 +13,7 @@ As always: Props, Kudos, Thanks for support, patience, inspiration and his uniqu
 
 ## 🚀 Setup
 
-1. Clone the repo and `cd` into the server directory:
+1. Clone the repo and `cd` into the respective directory:
    ```bash
    cd 0013-16/server
    ```
